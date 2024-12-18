@@ -1,0 +1,355 @@
+@font-face {
+    font-family: "Morana";
+    src: url("fonts/Morana.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("fonts/PlayfairDisplay.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* анимации */
+@keyframes circle-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(120deg);
+    }
+    66%{
+        transform: rotate(240deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scroll_2page {
+    from{
+        transform: scale(0, .025);
+    }
+    50%{
+        transform: scale(1, .025);
+    }
+}
+
+
+
+body
+{
+    font-family: "Morana";
+    background-color: aquamarine;
+    background-image: url('https://media1.tenor.com/m/fsVaG7wKGAcAAAAd/piwo.gif');
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Хедер */
+
+header{
+    width: 100%;
+    top: 0; 
+    margin-bottom: 0px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #505050;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.navigator{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    justify-content: space-between;
+    list-style-type: none;
+    
+}
+.nav-item1{
+    display: inline;
+    margin-right: 75px;
+ 
+}
+.header-number{
+    margin-right: 50px;
+}
+
+.header-logo{
+    margin-left: 49px;
+}
+
+.navigator a{
+    color: white;
+    text-decoration: none !important;
+    font-size: 26px;
+}
+
+.header-number a{
+    color: white;
+    text-decoration: none !important;
+    font-size: 26px;
+}
+
+.navigator :hover{
+    color: #EDBD10;
+}
+
+/* Первая страница */
+
+.bodylist1{
+    height: 800px;
+    width: 100%;
+    background-color: #2B2B2B;
+    position: relative;
+    margin-top: 100px;
+} 
+
+.titleBodyList1{
+    height: 800px;
+    width: 1200px;
+    position: absolute;
+    /* border: solid pink; */
+}
+
+.textTitleBodyList1{
+    position: absolute;
+    top: 200px;
+    left: 220px;
+    width: 884;
+    height: 259;
+    margin: auto;
+    z-index: 1;
+}
+
+.textForTitle{
+    color: white;
+    font-size: 96px;
+    letter-spacing: 2px;
+    
+}
+
+.circle1 {
+    height: 750px;
+    width: 750px;
+    background-color: #E30613;
+    border-radius: 50%;
+    filter: blur(12rem);
+    position: relative;
+    top: 250px;
+    left: 200px;
+}
+
+.circle2 {
+    height: 550px;
+    width: 300px;
+    background-color: color-mix(in oklab, #E30613, #FFF155 70%);
+    border-radius: 50%;
+    filter: blur(170px);
+    position: relative;
+    top: -600px;
+    left: 900px;
+}
+
+.circle3 {
+    height: 300px;
+    width: 270px;
+    background-color: color-mix(in oklab, #E30613, #FFF155 66%);
+    border-radius: 50%;
+    filter: blur(10rem);
+    position: relative;
+    top: -1250px;
+    left: 700px;
+} 
+
+.circlein1{
+    
+    height: 800px;
+    width: 1200px;
+    right: 0;
+    opacity: 0.9; 
+    position: absolute;
+    /* border: solid red; */
+}
+
+.ramka{
+    position: absolute;
+    height: 432px;
+    width: 391px;
+    right: 260px;
+    top: 200px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 13%);
+    box-shadow: inset 0px 5px 10px 0px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    border-radius: 50px;
+}
+
+.textInRamka{
+    margin: auto;
+    text-align: center;
+}
+
+.textInRamka p{
+
+    -webkit-text-stroke: 1px white;
+    background-clip: text;
+    color: transparent;
+    
+    font-size: 58px;
+}
+
+/* 2 Лист */
+
+.bodylist2{
+    height: 800px;
+    width: 100%;
+    background: linear-gradient(#2A2A2A, #FFFFFF);
+    position: relative;
+    font-family: "PlayfairDisplay";
+}
+
+.circlein2{
+    
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    /* border: solid red;  */
+    display: flex;
+    justify-content: center;
+}
+
+.circle12{
+    height: 384px;
+    width: 384px;
+    background: linear-gradient(135deg, #E30613 0%, #F17E35 51%, #FFF155 100%);
+    border-radius: 50%;
+    margin-top: 100px;
+    opacity: 0.7;
+    /* подключение анимаций */
+    animation-name: circle-rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+.elementIn2{
+    display: flex;
+    justify-content: center;
+    /* opacity: 0; */
+    opacity: 1;
+}
+
+.elementIn2.visible{
+    opacity: 1;
+    animation-name: scroll_2page;
+    animation-duration: 0.5s;
+}
+
+
+/* первая плашка */
+
+.element1{
+    width: 1636px;
+    height: 316px;
+    margin-top: 137px;
+    border-radius: 200px;
+    background: rgba(255, 255, 255, 13%);
+    box-shadow: inset 0px 5px 10px 0px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+}
+
+.textInElement1{
+    color: #FFFFFF;
+    height: 316px;
+    display: flex;
+    align-items: center;
+}
+
+.textList2{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.elTextL2{
+    display: flex;
+    width: 1400px;
+    height: 180px;
+}
+
+.textForElement1{
+    align-items: center;
+    width: 37%;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.textForElement2{
+    align-items: center;
+    width: 26%;
+    margin-top: 10px;
+    border-left: solid #C7C7C7; 
+    border-right: solid #C7C7C7;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.textForElement3{
+    align-items: center;
+    width: 37%;
+    margin-top: 10px;
+    text-align: right;
+    line-height: 1.5;
+}
+
+.elTextL2 p{
+    color: white;
+    text-decoration: none !important;
+    font-size: 26px;
+}
+
+/* вторая плашка */
+
+.element2{
+    height: 185px;
+    width: 1100px;
+    margin-top: 50px;
+    border-radius: 200px;
+    background: rgba(255, 255, 255, 13%);
+    box-shadow: inset 0px 5px 10px 0px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+
+}
+
+.forElement2{
+    display: flex;
+    justify-content: center;
+
+}
+
+.textInElement2{
+    
+    color: #FFFFFF;
+    font-size: 26px;
+} 
+
+.textForElement4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 145px;
+}
